@@ -9,6 +9,15 @@ $patPayPackage = new Patpay();
 //Create Bank Account
 $account = $patPayPackage->createAccount('24689', '0.00');
 
+
+$account->toArray();
+/* Output:
+    [
+        'accountNumber' => '24689',
+        'currentBalance' => '0.00'
+    ]
+ */
+
 //Credit Account
 $creditAccount = $patPayPackage->credit($account->getAccountNumber(), '100.00');
 

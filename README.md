@@ -14,8 +14,21 @@ use Achay\Patpay\Patpay;
 // Instantiate PatPay class
 $patPayPackage = new Patpay();
 
+
 //Create Bank Account
 $account = $patPayPackage->createAccount('24689', '0.00');
+
+
+// Get Account in Array object
+$account->toArray();
+/* Output:
+    [
+        'accountNumber' => '24689',
+        'availableBalance' => '0.00',
+        'totalBalance' => '0.00',
+    ]
+ */
+
 
 //Credit Account
 $creditAccount = $patPayPackage->credit($account->getAccountNumber(), '100.00');
