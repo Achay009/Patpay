@@ -38,11 +38,11 @@ class Patpay
      * @param int $accountNumber
      * @param float $amount
      *
-     * @return void
+     * @return Account
      */
-    public function credit(int $accountNumber, float $amount): void
+    public function credit(int $accountNumber, float $amount): Account
     {
-        $this->bankDatabase->getAccount($accountNumber)->credit($amount);
+        return $this->_bankDatabase->getAccount($accountNumber)->credit($amount);
     }
 
     /**
@@ -53,9 +53,9 @@ class Patpay
      *
      * @return void
      */
-    public function debit(int $accountNumber, float $amount): void
+    public function debit(int $accountNumber, float $amount): Account
     {
-        $this->bankDatabase->getAccount($accountNumber)->debit($amount);
+        return $this->_bankDatabase->getAccount($accountNumber)->debit($amount);
     }
 
     /**
@@ -69,8 +69,8 @@ class Patpay
      */
     public function transfer(int $fromAccountNumber, int $toAccountNumber, float $amount): void
     {
-        $this->bankDatabase->getAccount($fromAccountNumber)->debit($amount);
-        $this->bankDatabase->getAccount($toAccountNumber)->credit($amount);
+        $this->_bankDatabase->getAccount($fromAccountNumber)->debit($amount);
+        $this->_bankDatabase->getAccount($toAccountNumber)->credit($amount);
     }
 
     /**
@@ -82,6 +82,19 @@ class Patpay
      */
     public function getAccount(int $accountNumber): Account
     {
-        return $this->bankDatabase->getAccount($accountNumber);
+        return $this->_bankDatabase->getAccount($accountNumber);
+    }
+
+    /**
+     * This method for get total balance
+     *
+     * @param int $accountNumber
+     *
+     * @return float
+     */
+    public function getTotalBalance(int $accountNumber): float
+    {
+        return $this->_bankDatabase->getAccount($accountNumber)
+            ->getTotalBalance();
     }
 }

@@ -65,7 +65,7 @@ class Account extends Achay
      *
      * @param float $amount
      *
-     * @return void
+     * @return self
      */
     public function debit(float $amount): self
     {
@@ -79,7 +79,7 @@ class Account extends Achay
      *
      * @param float $amount
      *
-     * @return void
+     * @return self
      */
     public function credit(float $amount): self
     {
