@@ -25,7 +25,7 @@ class Patpay
     /**
      * This method for create bank database
      *
-     * @return BankDatabase
+     * @return Account
      */
     public function createAccount(int $accountNumber, int $currentBalance)
     {
