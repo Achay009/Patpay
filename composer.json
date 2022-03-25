@@ -1,0 +1,17 @@
+{
+    "name": "achay/patpay",
+    "description": "package for patricia account managaer",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Achay\\Patpay\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AchayInc",
+            "email": "uche.echesurum@mypatricia.co"
+        }
+    ],
+    "require": {}
+}
