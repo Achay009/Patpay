@@ -30,7 +30,7 @@ $balance = $patPayPackage->getTotalBalance($account->getAccountNumber());
 // Transfer From Account to another Account
 $transferFromAccount = $patPayPackage->transfer(
     $account->getAccountNumber(),
-    $patPayPackage->createAccount('34567', '300.0')->getTotalBalance(),
+    $patPayPackage->createAccount('34567', '300.0')->getAccountNumber(),
     '50.00'
 );
 
