@@ -8,6 +8,16 @@
 <p>&nbsp;</p>
 
 ### Usages
+As Routes that load endpoints to your project..\
+`POST  /patpay/create-account`\
+`POST  /patpay/debit`\
+`POST  /patpay/credit`\
+`POST  /patpay/transfer`\
+`POST  /patpay/check-balance`
+
+<p>&nbsp;</p>
+
+As a package you can use it in your project..
 ```php
 use Achay\Patpay\Patpay;
 

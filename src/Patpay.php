@@ -51,7 +51,7 @@ class Patpay
      * @param int $accountNumber
      * @param float $amount
      *
-     * @return void
+     * @return Account
      */
     public function debit(int $accountNumber, float $amount): Account
     {

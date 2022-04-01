@@ -7,11 +7,20 @@
             "Achay\\Patpay\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Achay\\Patpay\\PatpayPackageServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "AchayInc",
             "email": "uche.echesurum@mypatricia.co"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    }
 }
